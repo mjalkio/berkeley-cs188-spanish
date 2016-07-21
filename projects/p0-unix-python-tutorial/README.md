@@ -813,15 +813,15 @@ Starting on 1-21 at 23:39:51
 Question q1
 ===========
 *** FAIL: test_cases/q1/addition1.test
-***   add(a,b) must return the sum of a and b
+***   anadir(a,b) must return the sum of a and b
 ***   student result: "0"
 ***   correct result: "2"
 *** FAIL: test_cases/q1/addition2.test
-***   add(a,b) must return the sum of a and b
+***   anadir(a,b) must return the sum of a and b
 ***   student result: "0"
 ***   correct result: "5"
 *** FAIL: test_cases/q1/addition3.test
-***   add(a,b) must return the sum of a and b
+***   anadir(a,b) must return the sum of a and b
 ***   student result: "0"
 ***   correct result: "7.9"
 *** Tests failed.
@@ -892,64 +892,75 @@ Para cada una de las tres preguntas, esto muestra los resultados de las pruebas 
 
 En cuanto a los resultados de la pregunta 1, se puede ver que ha fracasado tres pruebas con el mensaje de error "add(a,b) must return the sum of a and b". La respuesta da su código es siempre 0, pero la respuesta correcta es diferente. Vamos a arreglar esto en la siguiente pestaña.
 
-Pregunta 1: Adición
+## Pregunta 1: Adición
 
-Abrir addition.py y vistazo a la definición de complemento :
+Abrir `addition.py` y vistazo a la definición de `add`:
 
-    def añadir (a, b):
-        "devolver la suma de ayb"
-        "*** *** aquí tu código promocional"
-        devolver 0
+```
+def add(a, b):
+    "Devolver la suma de a y b"
+    "*** aqui tu codigo ***"
+    return 0
+```
+
 Las pruebas llamaron a este con un y b establecer en valores diferentes, pero el código siempre devuelven cero. Modificar esta definición para que diga:
 
-    def añadir (a, b):
-        "devolver la suma de ayb"
-        impresión "Pasó a =% s ​​y b =% s, volviendo a + b =% s"% (a, b, a + b)
-        devolver una + b
+```
+def add(a, b):
+    "Devolver la suma de a y b"
+    print "Aprobada a=%s y b=%s, regresar a+b=%s" % (a, b, a + b)
+    return a + b
+```
+
 Ahora vuelva a ejecutar el autograder (omitiendo los resultados de las preguntas 2 y 3):
 
-[cs188-ta @ nova ~ / Tutorial] $ pitón autograder.py -q q1
-A partir del 1-21 en 23:52:05
+```
+[cs188-ta@nova ~/tutorial]$ python autograder.py -q q1
+Starting on 1-21 at 23:52:05
 
-q1 Pregunta
+Question q1
 ===========
-Pasó a = 1 y b = 1 , volviendo a + b = 2
-*** PASS: test_cases / Q1 / addition1.test
-*** añadir (a, b) devuelve la suma de ayb
-Pasó a = 2 y b = 3, volviendo a + b = 5
-*** Pasar: test_cases / Q1 / addition2.test
-*** añadir (a, b) devuelve la suma de ayb
-aprobó una = 10 y b = -2.1, volviendo a + b = 7.9
-*** Pasar: test_cases /q1/addition3.test
-*** añadir (a, b) devuelve la suma de ayb
 
-### Q1 pregunta: 1/1 ###
+Paso a=1 y b=1, regresar a+b=2
+*** PASS: test_cases/q1/addition1.test
+***   add(a,b) returns the sum of a and b
+Paso a=2 y b=3, regresar a+b=5
+*** PASS: test_cases/q1/addition2.test
+***   add(a,b) returns the sum of a and b
+Paso a=10 y b=-2.1, regresar a+b=7.9
+*** PASS: test_cases/q1/addition3.test
+***   add(a,b) returns the sum of a and b
 
-terminó a las 23:41:01
+### Question q1: 1/1 ###
 
-grados provisionales
-======= ===========
-pregunta Q1: 1/1
-pregunta P2: 0/1
-pregunta Q3: 0/1
+Finished at 23:41:01
+
+Provisional grades
+==================
+Question q1: 1/1
+Question q2: 0/1
+Question q3: 0/1
 ------------------
-total: 1 / 3
+Total: 1/3
+```
 
-Ahora pasa todas las pruebas, consiguiendo la máxima puntuación en la pregunta 1. Aviso de las nuevas líneas "pasó a = ...", que aparecen antes "*** PASS: ...". Estos son producidos por la sentencia de impresión en complemento . Puede utilizar declaraciones de impresión como que la información de salida útil para la depuración. También puede ejecutar el autograder con la opción --mute ocultar temporalmente dichas líneas, de la siguiente manera:
+Ahora pasa todas las pruebas, consiguiendo la máxima puntuación en la pregunta 1. Aviso de las nuevas líneas `Paso a = ...`, que aparecen antes `*** PASS: ...`. Estos son producidos por la sentencia de impresión en `add`. Puede utilizar declaraciones de impresión como que la información de salida útil para la depuración. También puede ejecutar el autograder con la opción `--mute` ocultar temporalmente dichas líneas, de la siguiente manera:
 
-[cs188-ta @ nova ~ / Tutorial] $ pitón autograder.py -q q1 --mute
-A partir del 1-22 en 14:15:33
+```
+[cs188-ta@nova ~/tutorial]$ python autograder.py -q q1 --mute
+Starting on 1-22 at 14:15:33
 
-q1 Pregunta
+Question q1
 ===========
-*** PASS: test_cases / Q1 / addition1.test
-*** añadir (a, b) devuelve la suma de a y b
-*** PASS: test_cases / Q1 / addition2.test
-*** añadir (a, b) devuelve la suma de a y b
-*** Pasar: test_cases / Q1 / addition3.test
-*** añadir (a, b) devuelve la suma de ayb
+*** PASS: test_cases/q1/addition1.test
+***   add(a,b) returns the sum of a and b
+*** PASS: test_cases/q1/addition2.test
+***   add(a,b) returns the sum of a and b
+*** PASS: test_cases/q1/addition3.test
+***   add(a,b) returns the sum of a and b
 
-### Q1 pregunta: 1/1 ###
+### Question q1: 1/1 ###
+```
 
 Pregunta 2: Función buyLotsOfFruit
 
