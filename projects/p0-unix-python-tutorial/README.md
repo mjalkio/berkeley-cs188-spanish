@@ -968,7 +968,9 @@ Añadir un `buyLotsOfFruit(listaOrdenada)` función para `buyLotsOfFruit.py` que
 
 Ejecutar `python autograder.py` que llegue la pregunta 2 pasa todas las pruebas y se obtiene la máxima puntuación. Cada prueba confirmará que `buyLotsOfFruit(listaOrdenada)` devuelve la respuesta correcta dada varias entradas posibles. Por ejemplo, `test_cases/Q2/food_price1.test` prueba si:
 
-`Cost of [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)] is 12.25`
+```
+Cost of [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)] is 12.25
+```
 
 ## Pregunta 3: Función ShopSmart
 
