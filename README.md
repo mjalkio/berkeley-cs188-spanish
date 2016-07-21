@@ -9,3 +9,7 @@ The instructor for the workshops is Michael Jalkio (@mjalkio), an exchange parti
 ## Using the Material
 
 All slides are uploaded in Keynote (.key) and PDF (.pdf) formats. You can convert Keynote files to PowerPoint using [Zamzar](http://www.zamzar.com/convert/key-to-ppt).
+
+## Notes
+
+Translations will not be word-for-word, as materials will be edited to fit the needs of the workshops.
