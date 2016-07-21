@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -13,31 +13,33 @@
 
 
 """
-To run this script, type
+Para ejecutar esta secuencia de comandos, escriba
 
   python buyLotsOfFruit.py
 
-Once you have correctly implemented the buyLotsOfFruit function,
-the script should produce the output:
+Una vez que haya aplicado correctamente la funcion de comprar un lote de fruta,
+la secuencia de comandos debe producir la salida:
 
 Cost of [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)] is 12.25
 """
 
-fruitPrices = {'apples':2.00, 'oranges': 1.50, 'pears': 1.75,
-              'limes':0.75, 'strawberries':1.00}
+fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75,
+               'limes': 0.75, 'strawberries': 1.00}
 
-def buyLotsOfFruit(orderList):
-    """
-        orderList: List of (fruit, numPounds) tuples
 
-    Returns cost of order
+def buyLotsOfFruit(listaOrdenada):
     """
-    totalCost = 0.0
-    "*** YOUR CODE HERE ***"
-    return totalCost
+        listaOrdenada: Lista de (fruta, libras) tuplas
+
+    Devuelve coste de orden
+    """
+    coste_total = 0.0
+    "*** aqui tu codigo ***"
+    return coste_total
 
 # Main Method
 if __name__ == '__main__':
-    "This code runs when you invoke the script from the command line"
-    orderList = [ ('apples', 2.0), ('pears', 3.0), ('limes', 4.0) ]
-    print 'Cost of', orderList, 'is', buyLotsOfFruit(orderList)
+    "Este codigo se ejecuta cuando se invoca el script desde la linea de \
+    comandos"
+    listaOrdenada = [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)]
+    print 'Cost of', listaOrdenada, 'is', buyLotsOfFruit(listaOrdenada)

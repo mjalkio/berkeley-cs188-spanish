@@ -8,9 +8,9 @@ Versión original se puede encontrar [aquí](http://ai.berkeley.edu/tutorial.htm
 2. Conceptos básicos de Unix
 3. Conceptos básicos de Python
 4. Autograding
-5. P1: Adición
-6. P2: ComprarMuchasFrutas
-7. P3: ComprarInteligente
+5. P1: Add
+6. P2: BuyLotsOfFruit
+7. P3: ShopSmart
 
 ## Introducción
 
@@ -962,14 +962,15 @@ Question q1
 ### Question q1: 1/1 ###
 ```
 
-Pregunta 2: Función buyLotsOfFruit
+## Pregunta 2: Función buyLotsOfFruit
 
-Añadir un buyLotsOfFruit (OrderList) función para buyLotsOfFruit.py que tiene una lista de (frutas, libra) tuplas y devuelve el coste de su lista. Si hay algo de fruta en la lista que no aparece en fruitPrices debe imprimir un mensaje de error y volver Ninguno . Por favor, no cambie el fruitPrices variable.
+Añadir un `buyLotsOfFruit(listaOrdenada)` función para `buyLotsOfFruit.py` que tiene una lista de (`fruta`, `libra`) tuplas y devuelve el coste de su lista. Si hay algo de fruta en la lista que no aparece en `fruitPrices` debe imprimir un mensaje de error y volver `None`. Por favor, no cambie el `fruitPrices` variable.
 
-Ejecutar pitón autograder.py que llegue la pregunta 2 pasa todas las pruebas y se obtiene la máxima puntuación. Cada prueba confirmará que buyLotsOfFruit (OrderList) devuelve la respuesta correcta dada varias entradas posibles. Por ejemplo, test_cases / Q2 / food_price1.test prueba si:
+Ejecutar `python autograder.py` que llegue la pregunta 2 pasa todas las pruebas y se obtiene la máxima puntuación. Cada prueba confirmará que `buyLotsOfFruit(listaOrdenada)` devuelve la respuesta correcta dada varias entradas posibles. Por ejemplo, `test_cases/Q2/food_price1.test` prueba si:
 
-Costo de [( 'manzanas', 2,0), ( 'peras', 3,0), ( 'limas', 4,0)] es 12.25
-Pregunta 3: Función ShopSmart
+`Cost of [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)] is 12.25`
+
+## Pregunta 3: Función ShopSmart
 
 Rellenar la función ShopSmart (pedidos, tiendas) en shopSmart.py , que toma un OrderList (como el tipo aprobado para FruitShop.getPriceOfOrder ) y una lista de Fruitshop y devuelve el Fruitshop en su pedido le cuesta a la menor cantidad en total. No cambie el nombre del archivo o nombres de variables, por favor. Tenga en cuenta que vamos a ofrecer la shop.py aplicación como un archivo de "apoyo", por lo que no necesita dejar su opinión.
 
