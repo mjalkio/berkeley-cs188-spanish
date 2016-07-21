@@ -972,25 +972,32 @@ Ejecutar `python autograder.py` que llegue la pregunta 2 pasa todas las pruebas 
 
 ## Pregunta 3: Función ShopSmart
 
-Rellenar la función ShopSmart (pedidos, tiendas) en shopSmart.py , que toma un OrderList (como el tipo aprobado para FruitShop.getPriceOfOrder ) y una lista de Fruitshop y devuelve el Fruitshop en su pedido le cuesta a la menor cantidad en total. No cambie el nombre del archivo o nombres de variables, por favor. Tenga en cuenta que vamos a ofrecer la shop.py aplicación como un archivo de "apoyo", por lo que no necesita dejar su opinión.
+Rellenar la función `shopSmart(pedidos, tiendas)` en `shopSmart.py`, que toma un ListaOrdenada (como el tipo aprobado para `FruitShop.getPriceOfOrder`) y una lista de FruitShop y devuelve el FruitShop en su pedido le cuesta a la menor cantidad en total. No cambie el nombre del archivo o nombres de variables, por favor.
 
-Ejecutar pitón autograder.py que llegue la pregunta 3 pasa todas las pruebas y se obtiene la máxima puntuación. Cada prueba confirmará que ShopSmart (pedidos, tiendas) devuelve la respuesta correcta dada varias entradas posibles. Por ejemplo, con las siguientes definiciones de las variables:
+Ejecutar `python autograder.py` que llegue la pregunta 3 pasa todas las pruebas y se obtiene la máxima puntuación. Cada prueba confirmará que `shopSmart(pedidos, tiendas)` devuelve la respuesta correcta dada varias entradas posibles. Por ejemplo, con las siguientes definiciones de las variables:
 
-Orders1 = [( 'manzanas', 1,0), ( 'naranjas', 3,0)]
-Orders2 = [( 'manzanas', 3,0)]
-dir1 = { 'manzanas': 2,0 ', naranjas': 1.0}
-shop1 = shop.FruitShop ( 'shop1', dir1)
-directorio2 = { 'manzanas': 1,0, 'naranjas': 5,0}
-shop2 = shop.FruitShop ( 'shop2', directorio2)
-tiendas = [shop1, shop2]
-test_cases / Q3 / select_shop1.test prueba si:
+```
+orders1 = [('apples',1.0), ('oranges',3.0)]
+orders2 = [('apples',3.0)]
+dir1 = {'apples': 2.0, 'oranges':1.0}
+shop1 =  shop.FruitShop('shop1',dir1)
+dir2 = {'apples': 1.0, 'oranges': 5.0}
+shop2 = shop.FruitShop('shop2',dir2)
+shops = [shop1, shop2]
+```
 
-shopSmart.shopSmart (solicitudes1, tiendas) == shop1
+test_cases/q3/select_shop1.test prueba si:
 
-y test_cases / Q3 / select_shop2.test prueba si:
+```
+shopSmart.shopSmart(orders1, shops) == shop1
+```
 
-shopSmart.shopSmart (Orders2, tiendas) == shop2
+y test_cases/q3/select_shop2.test prueba si:
 
-Sumisión
+```
+shopSmart.shopSmart(orders2, shops) == shop2
+```
 
-No hemos terminado todavía! Siga las indicaciones de su instructor para recibir crédito en su proyecto!
+## Sumisión
+
+No se requiere la presentación. Felicitaciones por pasar el autograder y familiarizarse con Python!
