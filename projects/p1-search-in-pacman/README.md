@@ -9,7 +9,7 @@ Versión original se puede encontrar [aquí](http://http://ai.berkeley.edu/searc
 3. P1: primera búsqueda en profundidad
 4. P2: búsqueda en anchura
 5. P3: Uniforme Costo Buscar
-6. P4: A * Buscar
+6. P4: A* Buscar
 7. P5: Esquinas Problema: Representación
 8. P6: Esquinas Problema: Heurística
 9. P7: Comer todos los puntos: Heurística
@@ -17,7 +17,7 @@ Versión original se puede encontrar [aquí](http://http://ai.berkeley.edu/searc
 
 ## Introducción
 
-![Pac-man in maze]
+![Pac-man in maze](https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/release/search/v1/001/maze.png)
 > Todas esas paredes de colores, laberintos dan Pacman el blues, así que le enseñan a buscar.
 
 En este proyecto, su agente de Pacman encontrará caminos a través de su mundo laberinto, tanto para llegar a un lugar determinado y de recogida de alimentos de manera eficiente. Usted va a construir algoritmos de búsqueda generales y aplicarlos a situaciones de Pacman.
@@ -32,16 +32,16 @@ Ver el tutorial autograder en Project 0 para obtener más información sobre có
 
 El código para este proyecto consta de varios archivos de Python, algunos de los cuales deberá leer y entender con el fin de completar la tarea, y algunos de los cuales se puede pasar por alto.
 
-*Los archivos que va a editar:*
+**Los archivos que va a editar:**
 * search.py - Donde todas sus algoritmos de búsqueda residirán.
 * searchAgents.py - Donde todos sus agentes basados ​​en la búsqueda residirán.
 
-*Archivos es posible que desee mirar:*
+**Archivos es posible que desee mirar:**
 * pacman.py - El archivo principal que corre juegos de Pacman. Este archivo describe un tipo Pacman gamestate, que se utiliza en este proyecto.
 * game.py - La lógica detrás de cómo funciona el mundo Pacman. Este archivo describe varios tipos de soporte como AgentState, agente, Dirección, y Cuadrícula.
 * util.py - estructuras de datos útiles para la implementación de algoritmos de búsqueda.
 
-*Apoyando archivos que puede pasar por alto:*
+**Apoyando archivos que puede pasar por alto:**
 * graphicsDisplay.py - Gráficos de Pacman
 * graphicsUtils.py - Soporte para gráficos de Pacman
 * textDisplay.py - gráficos ASCII para Pacman
@@ -54,7 +54,7 @@ El código para este proyecto consta de varios archivos de Python, algunos de lo
 * test_cases/ - Directorio que contiene los casos de prueba para cada pregunta
 * searchTestClasses.py - Proyecto 1 clases de prueba específicos autograding
 
-*Evaluación:* El código será autograded para la corrección técnica. Por favor, no cambiar los nombres de las funciones o clases establecidas en el código, o va a causar estragos en el autograder.
+**Evaluación:** El código será autograded para la corrección técnica. Por favor, no cambiar los nombres de las funciones o clases establecidas en el código, o va a causar estragos en el autograder.
 
 **Obtención de ayuda:** Usted no está solo! Si usted se encuentra atascado en algo, póngase en contacto con Michael en busca de ayuda. Queremos que estos proyectos sean gratificantes y de instrucción, no frustrante y desmoralizante. Sin embargo, no sabemos cuándo o cómo ayudar a menos que se le pregunte.
 
@@ -108,11 +108,11 @@ El comando anterior le indica la SearchAgent de usar tinyMazeSearch como su algo
 
 Ahora es el momento de escribir funciones de pleno derecho genéricos de búsqueda para ayudar a planificar rutas Pacman! Pseudocódigo para los algoritmos de búsqueda que voy a escribir se puede encontrar en las diapositivas de las clases. Recuerde que un nodo de búsqueda debe contener no sólo un estado, sino también la información necesaria para reconstruir la ruta (plan), que llega a ese estado.
 
-*Nota importante:* Todos sus funciones de búsqueda tienen que devolver una lista de **acciones** que conduzcan al agente desde el principio hasta el fin. Todas estas acciones tienen que ser jugadas legales (direcciones válidas, sin que se mueven a través de las paredes).
+**Nota importante:** Todos sus funciones de búsqueda tienen que devolver una lista de *acciones* que conduzcan al agente desde el principio hasta el fin. Todas estas acciones tienen que ser jugadas legales (direcciones válidas, sin que se mueven a través de las paredes).
 
-*Nota importante:* Asegúrese de utilizar la Stack, Queue y PriorityQueue estructuras de datos proporcionado a usted en util.py! Estas implementaciones estructura de datos tienen propiedades particulares que se requieren para la compatibilidad con el autograder.
+**Nota importante:** Asegúrese de utilizar la Stack, Queue y PriorityQueue estructuras de datos proporcionado a usted en util.py! Estas implementaciones estructura de datos tienen propiedades particulares que se requieren para la compatibilidad con el autograder.
 
-**Pista:** Cada algoritmo es muy similar. Algoritmos para la DFS, BFS, UCS, y A* sólo difieren en los detalles de cómo se gestiona la franja. Por lo tanto, se concentran en conseguir DFS derecha y el resto debería ser relativamente sencilla. De hecho, una posible implementación requiere solamente un único método de búsqueda genérico que está configurado con una estrategia de puesta en cola específica del algoritmo. (Su aplicación es necesario que no sea de esta forma para recibir crédito completo).
+*Pista:* Cada algoritmo es muy similar. Algoritmos para la DFS, BFS, UCS, y A* sólo difieren en los detalles de cómo se gestiona la franja. Por lo tanto, se concentran en conseguir DFS derecha y el resto debería ser relativamente sencilla. De hecho, una posible implementación requiere solamente un único método de búsqueda genérico que está configurado con una estrategia de puesta en cola específica del algoritmo. (Su aplicación es necesario que no sea de esta forma para recibir crédito completo).
 
 Implementar el algoritmo de búsqueda primero en profundidad (DFS) en el depthFirstSearch función en search.py. Para hacer su algoritmo completo , escribir la versión de búsqueda gráfica de la DFS, lo que evita la expansión de los estados ya visitados.
 
@@ -126,7 +126,7 @@ python pacman.py -l bigMaze -z .5 -p SearchAgent
 
 La junta Pacman mostrará una superposición de los estados exploradas, y el orden en el que fueron explorados (más brillante de color rojo significa la exploración anterior). Es el orden de exploración de lo que habría esperado? Pacman no van realmente a todos los cuadrados explorados en su camino a la meta?
 
-**Sugerencia:** Si se utiliza una pila como la estructura de datos, la solución encontrada por el algoritmo DFS para mediumMaze debe tener una longitud de 130 (siempre que empuja sucesores sobre la franja en el orden establecido por getSuccessors; podría obtener 246 si les mueves en el orden inverso). ¿Es esta una solución menos costo? Si no es así, pensar en lo primero en profundidad de búsqueda está haciendo mal.
+*Sugerencia:* Si se utiliza una pila como la estructura de datos, la solución encontrada por el algoritmo DFS para mediumMaze debe tener una longitud de 130 (siempre que empuja sucesores sobre la franja en el orden establecido por getSuccessors; podría obtener 246 si les mueves en el orden inverso). ¿Es esta una solución menos costo? Si no es así, pensar en lo primero en profundidad de búsqueda está haciendo mal.
 
 ## Pregunta 2 (3 puntos): búsqueda en anchura (BFS)
 
@@ -139,9 +139,9 @@ python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
 
 BFS no encontrar una solución menos costosa? Si no es así, comprobar su aplicación.
 
-**Sugerencia:** Si Pacman mueve con demasiada lentitud para usted, pruebe la opción `--frameTime 0`.
+*Sugerencia:* Si Pacman mueve con demasiada lentitud para usted, pruebe la opción `--frameTime 0`.
 
-**Nota:** Si usted ha escrito el código de búsqueda de forma genérica, el código debería funcionar igual de bien para el problema de búsqueda de ocho rompecabezas sin ningún cambio.
+*Nota:* Si usted ha escrito el código de búsqueda de forma genérica, el código debería funcionar igual de bien para el problema de búsqueda de ocho rompecabezas sin ningún cambio.
 
 ```
 python eightpuzzle.py
@@ -161,7 +161,7 @@ python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
 python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
 ```
 
-**Nota:** Usted debe conseguir unos costes muy bajos y muy altos de ruta para el StayEastSearchAgent y StayWestSearchAgent respectivamente, debido a sus funciones de coste exponenciales (véase searchAgents.py para más detalles).
+*Nota:* Usted debe conseguir unos costes muy bajos y muy altos de ruta para el StayEastSearchAgent y StayWestSearchAgent respectivamente, debido a sus funciones de coste exponenciales (véase searchAgents.py para más detalles).
 
 ## Pregunta 4 (3 puntos): búsqueda A*
 
@@ -181,7 +181,7 @@ El poder real de A* sólo será evidente con un problema de búsqueda más difí
 
 En los laberintos de la esquina , hay cuatro puntos, uno en cada esquina. Nuestro nuevo problema de búsqueda es encontrar el camino más corto a través del laberinto que toca las cuatro esquinas (si el laberinto en realidad tiene comida allí o no). Tenga en cuenta que para algunos laberintos como tinyCorners, el camino más corto no siempre van a la comida más cercano primero! **Sugerencia:** el camino más corto a través tinyCorners toma 28 pasos.
 
-**Nota: Asegúrese de completar la pregunta 2 antes de trabajar en la pregunta 5, porque la pregunta 5 se basa en su respuesta a la pregunta 2.**
+*Nota: Asegúrese de completar la pregunta 2 antes de trabajar en la pregunta 5, porque la pregunta 5 se basa en su respuesta a la pregunta 2.*
 
 Implementar el CornersProblem problema de búsqueda en searchAgents.py. Usted tendrá que elegir una representación estatal que codifica toda la información necesaria para detectar si se han alcanzado las cuatro esquinas. Ahora, su agente de búsqueda debe resolver:
 
@@ -192,13 +192,13 @@ python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 
 Es necesario definir una representación abstracta del estado que no codifican información irrelevante (como la posición de los fantasmas, donde la comida extra es, etc.). En particular, no utilice un Pacman gamestate como un estado de búsqueda. Su código será muy, muy lento si lo hace (y también mal).
 
-**Sugerencia:** Las únicas partes del estado juego que necesita para hacer referencia en su aplicación son la puesta en posición de Pacman y la ubicación de las cuatro esquinas.
+*Sugerencia:* Las únicas partes del estado juego que necesita para hacer referencia en su aplicación son la puesta en posición de Pacman y la ubicación de las cuatro esquinas.
 
 Nuestra aplicación de breadthFirstSearch se expande un poco menos de 2000 nodos de búsqueda en mediumCorners . Sin embargo, la heurística (utilizados con búsqueda A *) pueden reducir la cantidad de búsqueda requeridos.
 
 ## Pregunta 6 (3 puntos): Esquinas Problema: Heurística
 
-**Nota: Asegúrese de completar la pregunta 4 antes de trabajar en la pregunta 6, porque la pregunta 6 se basa en su respuesta a la pregunta 4.**
+*Nota: Asegúrese de completar la pregunta 4 antes de trabajar en la pregunta 6, porque la pregunta 6 se basa en su respuesta a la pregunta 4.*
 
 Implementar un no trivial, heurística consistente para el CornersProblem en cornersHeuristic.
 
@@ -206,19 +206,19 @@ Implementar un no trivial, heurística consistente para el CornersProblem en cor
 python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
 ```
 
-**Nota:** AStarCornersAgent es un atajo para
+*Nota:* AStarCornersAgent es un atajo para
 
 ```
 -p SearchAgent -a fn=aStarSearch,prob=CornersProblem,heuristic=cornersHeuristic.
 ```
 
-*Admisibilidad vs. Consistencia:* Recuerde, la heurística son sólo las funciones que se llevan a estados de búsqueda y los números que estiman el costo para un objetivo más próximo regreso. Heurística más eficaces serán los valores vuelvan a acercarse a los costes reales de gol. Para ser admisibles, los valores heurísticos deben tener límites inferiores sobre el costo real del camino más corto a la meta más cercana (y no negativo). Para ser coherente , debe sostener, además, que si una acción tiene costo c, luego de tomar esa acción sólo puede provocar una caída de heurística de un máximo de c.
+**Admisibilidad vs. Consistencia:** Recuerde, la heurística son sólo las funciones que se llevan a estados de búsqueda y los números que estiman el costo para un objetivo más próximo regreso. Heurística más eficaces serán los valores vuelvan a acercarse a los costes reales de gol. Para ser admisibles, los valores heurísticos deben tener límites inferiores sobre el costo real del camino más corto a la meta más cercana (y no negativo). Para ser coherente , debe sostener, además, que si una acción tiene costo c, luego de tomar esa acción sólo puede provocar una caída de heurística de un máximo de c.
 
 Recuerde que la admisibilidad no es suficiente para garantizar la corrección en busca gráfico - que necesita la condición más fuerte de consistencia. Sin embargo, heurística admisible suelen ser también coherente, sobre todo si se derivan de relajaciones de problemas. Por lo tanto, suele ser más fácil de comenzar a cabo por la lluvia de ideas heurística admisible. Una vez que tenga una heurística admisible que funciona bien, se puede comprobar si de hecho es consistente, también. La única manera de garantizar la consistencia es con una prueba. Sin embargo, la inconsistencia menudo se puede detectar mediante la verificación de que para cada nodo se expande, sus nodos sucesores son iguales o mayores en valor de f. Por otra parte, si UCS y A* jamás regresan senderos de diferentes longitudes, su heurística es inconsistente. Esta materia es difícil!
 
-*No trivial Heurística:* La heurística triviales son los que devuelven cero en todas partes (UCS) y la heurística que calcula el coste real finalización. El primero no le ahorrará cualquier momento, mientras que el segundo tiempo de espera del autograder. ¿Quieres una heurística que reduce el tiempo total de cómputo, aunque para esta tarea la autograder sólo comprueba el recuento de nodos (aparte de la aplicación de un límite de tiempo razonable).
+**No trivial Heurística:** La heurística triviales son los que devuelven cero en todas partes (UCS) y la heurística que calcula el coste real finalización. El primero no le ahorrará cualquier momento, mientras que el segundo tiempo de espera del autograder. ¿Quieres una heurística que reduce el tiempo total de cómputo, aunque para esta tarea la autograder sólo comprueba el recuento de nodos (aparte de la aplicación de un límite de tiempo razonable).
 
-*Calificaciones:* Su heurística debe ser un no trivial heurística constante no negativa a recibir los puntos. Asegúrese de que su heurística devuelve 0 en cada estado de la meta y nunca devuelve un valor negativo. Dependiendo de qué tan pocos nodos expande sus heurísticas, se le calificará:
+**Calificaciones:** Su heurística debe ser un no trivial heurística constante no negativa a recibir los puntos. Asegúrese de que su heurística devuelve 0 en cada estado de la meta y nunca devuelve un valor negativo. Dependiendo de qué tan pocos nodos expande sus heurísticas, se le calificará:
 
 Número de nodos expandidos |  Grado
 -------------------------- | ------
@@ -227,7 +227,7 @@ como máximo 2000 |  1/3
 como máximo 1600 |  2/3
 como máximo 1200 |  3/3
 
-**Recuerde:** Si su heurística es inconsistente, recibirá ningún crédito, así que ten cuidado!
+*Recuerde:* Si su heurística es inconsistente, recibirá ningún crédito, así que ten cuidado!
 
 ## Pregunta 7 (4 puntos): Comer todos los puntos
 
@@ -237,11 +237,11 @@ Ahora vamos a resolver un problema de búsqueda dura: comer todos los alimentos 
 python pacman.py -l testSearch -p AStarFoodSearchAgent
 ```
 
-**Nota:** AStarFoodSearchAgent es un atajo para `-p SearchAgent -a fn=astar,prob=FoodSearchProblem,heuristic=foodHeuristic`.
+*Nota:* AStarFoodSearchAgent es un atajo para `-p SearchAgent -a fn=astar,prob=FoodSearchProblem,heuristic=foodHeuristic`.
 
 Usted debe encontrar que UCS se hace más lento, incluso para el aparentemente simple tinySearch . Como referencia, nuestra aplicación toma 2.5 segundos para encontrar un camino de longitud 27, después de expandirse 5057 nodos de búsqueda.
 
-**Nota: Asegúrese de completar la pregunta 4 antes de trabajar en la pregunta 7, porque la pregunta 7 se basa en su respuesta a la pregunta 4.**
+*Nota: Asegúrese de completar la pregunta 4 antes de trabajar en la pregunta 7, porque la pregunta 7 se basa en su respuesta a la pregunta 4.*
 
 Rellene foodHeuristic en searchAgents.py con una consistente heurística para la FoodSearchProblem. Probar su agente en el trickySearch tabla:
 
@@ -261,7 +261,7 @@ como máximo 12.000 | 3/4
 como máximo 9000 | 4/4 (crédito completo; medio)
 como máximo 7000 | 5/4 (crédito adicional opcional; duro)
 
-**Recuerde:** Si su heurística es inconsistente, recibirá ningún crédito, así que ten cuidado! ¿Se puede resolver mediumSearch en un corto período de tiempo? Si es así, estamos muy bien, muy impresionado, o su heurística es inconsistente.
+*Recuerde:* Si su heurística es inconsistente, recibirá ningún crédito, así que ten cuidado! ¿Se puede resolver mediumSearch en un corto período de tiempo? Si es así, estamos muy bien, muy impresionado, o su heurística es inconsistente.
 
 ## Pregunta 8 (3 puntos): subóptima Buscar
 
@@ -273,7 +273,7 @@ Implementar la función findPathToClosestDot en searchAgents.py . Nuestro agente
 python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5
 ```
 
-**Pista:** La forma más rápida de completar findPathToClosestDot es llenar en el AnyFoodSearchProblem, que está ausente de su prueba de gol. Entonces, resolver ese problema con una función de búsqueda apropiada. La solución debe ser muy corto!
+*Pista:* La forma más rápida de completar findPathToClosestDot es llenar en el AnyFoodSearchProblem, que está ausente de su prueba de gol. Entonces, resolver ese problema con una función de búsqueda apropiada. La solución debe ser muy corto!
 
 Su ClosestDotSearchAgent no siempre va a encontrar el camino más corto posible a través del laberinto. Asegúrese de que usted entiende por qué y tratar de llegar a un pequeño ejemplo en el que ir varias veces para que el punto más cercano no da lugar a encontrar el camino más corto para comer todos los puntos.
 
