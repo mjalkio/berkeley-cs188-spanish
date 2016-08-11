@@ -1,6 +1,6 @@
 # Proyecto 1: Buscar en Pacman
 
-Versión original se puede encontrar [aquí](http://http://ai.berkeley.edu/search.html).
+Versión original se puede encontrar [aquí](http://ai.berkeley.edu/search.html).
 
 ## Tabla de contenido
 
