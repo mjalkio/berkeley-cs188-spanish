@@ -18,10 +18,15 @@ If we had class everyone would have looked for material online (tutorials, news 
 
 ## Fun Artificial Intelligence
 
-* [Playing Mario with AI](https://www.youtube.com/watch?v=DlkMs4ZHHr8) - a few years ago there was a series of competitions where the goal was to write an AI to play Mario. As you can see from this video, the AIs got very good at it. I also [did a project in university](https://github.com/mjalkio/MarioAI) with these AIs, I'll show you in class!
+* [Playing Mario with AI](https://www.youtube.com/watch?v=DlkMs4ZHHr8) - a few years ago there was a series of competitions where the goal was to write an AI to play Mario. As you can see from this video, the AIs got very good at it. I also [did a project in university](https://github.com/mjalkio/MarioAI) with these AIs, you can play with it yourself!
 
 ## News Articles
 
 * [Human-Like: Facebook is using our data to build the 'world's best' Artificial Intelligence lab](http://www.popsci.com/facebook-ai)
 * [How Google is Remaking Itself as a "Machine Learning First" Company](https://backchannel.com/how-google-is-remaking-itself-as-a-machine-learning-first-company-ada63defcb70)
 * [Google’s AI Wins Fifth And Final Game Against Go Genius Lee Sedol](http://www.wired.com/2016/03/googles-ai-wins-fifth-final-game-go-genius-lee-sedol/)
+
+## Further Learning
+
+* [UC Berkeley CS188 Intro to AI](http://ai.berkeley.edu/home.html) - by now you all know that my class used the materials from this class. If you want to keep learning you can use the materials available on the website and on edX.
+* [Machine Learning (Coursera)](https://www.coursera.org/learn/machine-learning) - once you understand the basics of AI you might want to start learning about machine learning. This course is probably the most famous free resource to learn about ML.
